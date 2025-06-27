@@ -1,0 +1,96 @@
+/*
+  Perfected: ProjectCard.module.css
+  This version implements the exact visual details for the glass cards.
+*/
+.cardLink {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.card {
+  /* Applying the master glass card style */
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 30px; /* More generous padding */
+  border-radius: 24px;
+  width: 100%;
+  min-height: 280px; /* A more substantial card height */
+  box-sizing: border-box;
+  text-align: left;
+  transition: all 0.25s ease-out; /* Smoother transition */
+  
+  /* The refined glassmorphism effect */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.02); /* More pronounced lift */
+  border-color: var(--card-hover-border);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-size: 48px;
+  color: #d8cffc; /* A soft, purple-tinted default color */
+  flex-shrink: 0;
+  transition: all 0.25s ease-out;
+}
+
+.card:hover .logo {
+    /* Bright, glowing icon on hover */
+    color: #f4b0ff; 
+    filter: drop-shadow(0 0 8px #f4b0ff);
+}
+
+.title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+/* Apply gradient to title on hover */
+.card:hover .title {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  color: var(--text-color-secondary);
+  margin-bottom: 30px;
+  font-size: 1rem;
+  line-height: 1.7;
+  flex-grow: 1;
+  font-weight: 400;
+}
+
+.tags {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: var(--tag-bg);
+  color: var(--text-color);
+  padding: 6px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--tag-border);
+  font-size: 0.85rem;
+  font-weight: 500;
+}

@@ -1,0 +1,75 @@
+/*
+  Complete CSS Overhaul: App.css
+  This file establishes the precise, vibrant color palette and font foundation
+  extracted from the target design.
+*/
+:root {
+  /*
+    -- NEW PRECISION PALETTE --
+    Extracted directly from hpdevfox.ru screenshots for 1:1 accuracy.
+  */
+  --background-color: #0d0b14; /* The true deep space background */
+  --text-color: #ededed;
+  --text-color-secondary: #a09fa6;
+  
+  /* The core of the glass effect: a purple-tinted, semi-transparent base */
+  --card-bg: rgba(30, 25, 50, 0.45); 
+  --card-border: rgba(188, 174, 255, 0.1);
+  --card-hover-border: rgba(200, 188, 255, 0.7);
+
+  --tag-bg: rgba(58, 50, 92, 0.5);
+  --tag-border: rgba(188, 174, 255, 0.2);
+  
+  --link-button-bg: rgba(30, 25, 50, 0.6);
+  --link-button-hover-bg: rgba(58, 50, 92, 0.8);
+
+  /* The vibrant gradient for hero text and hover effects */
+  --accent-gradient: linear-gradient(90deg, #b3a2ff, #f4b0ff);
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 120px; /* Increased spacing for a cleaner layout */
+  padding: 0 24px 120px 24px;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: var(--text-color);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}

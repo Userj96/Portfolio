@@ -1,0 +1,57 @@
+/*
+  Total Redesign: SkillsStyles.module.css
+  This eradicates the old, ugly list and implements a new, sophisticated
+  grid system using the master glass card aesthetic.
+*/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.skillList {
+  width: 100%;
+  display: grid;
+  /* A responsive grid that looks great on all screen sizes */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.skillCard {
+  /* Applying the master glass card style */
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 25px;
+  
+  /* The essential glassmorphism effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  transition: all 0.2s ease-in-out;
+  text-align: left;
+}
+
+.skillCard:hover {
+  transform: translateY(-8px);
+  border-color: var(--card-hover-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skillCard h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-color);
+}
+
+.skillCard p {
+  color: var(--text-color-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
